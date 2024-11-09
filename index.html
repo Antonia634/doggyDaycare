@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Titel för hunddagiset -->
+    <h1 id="hunddagisNamn"></h1>
+    <!-- Sektion för hundskötarna -->
+    <section id="hundskotareSektion">
+        <section>
+            <h2>Tillgängliga hundskötare:</h2>
+            <!-- Hundskötare som läggs till hamnar i detta div element -->
+            <div id="hundSkotareDiv"></div>
+        </section>
+        <section class="laggInISystemet">
+            <h3>Lägg till hundskötare</h3>
+            <label for="namnSkotareInput">Hundskötarens namn: </label>
+            <input type="text" id="namnSkotareInput">
+            <button id="laggTillHundskotareKnapp">Lägg till hundskötare</button>
+        </section>
+    </section>
+    <!-- Sektion för hundarna -->
+    <section id="hundarSektion">
+        <section id="hundarPaDagiset">
+            <h2>Hundar inne just nu:</h2>
+            <!-- Hundar som läggs till hamnar i detta div element -->
+            <div id="hundarInneDiv"></div>
+        </section>
+        <section class="laggInISystemet">
+            <h3>Lägg till hund</h3>
+            <div><label for="namnHundInput">Hundens namn: </label>
+                <input type="text" id="namnHundInput">
+            </div>
+            <div><label for="BoxHundInput">Hundens box: </label>
+                <input type="number" id="BoxHundInput" min="1" max="10">
+            </div>
+            <div><label for="ansvarigSkotareInput">Ansvarig hundskötare: </label>
+                <input type="text" id="ansvarigSkotareInput">
+            </div>
+            <div><label for="typAvFoderInput">Typ av foder hunden äter: </label>
+                <input type="text" id="typAvFoderInput">
+            </div>
+            <div><label for="mangdFoderInput">Mängd foder hunden äter (dl): </label>
+                <input type="text" id="mangdFoderInput">
+            </div>
+            <button id="laggTillHund">Lägg till hund</button>
+        </section>
+    </section>
+    <!-- Sektion där man byter namn på huddagiset -->
+    <section id="bytDagisnamnSektion">
+        <h2 id="bytDagisnamnTitel">Byt dagisnamn:</h2>
+        <label for="nyttDagisnamnInput">Nytt dagisnamn: </label>
+        <input type="text" id="nyttDagisnamnInput">
+        <button id="bytDagisnamnKnapp">Byt namnet</button>
+    </section>
+    <!-- Sektion där man kontrollerar hundar i en specifik box -->
+    <section id="kollaBoxSektion">
+        <h2>Kontrollera vilka hundar som befinner sig i en box:</h2>
+        <label for="vilkenBoxInput">Vilken box vill du kolla? </label>
+        <input type="number" id="vilkenBoxInput" min="1" max="10">
+        <button id="kollaBoxKnapp">Kolla boxen</button>
+        <div id="boxOutput"></div>
+    </section>
+    <script src="hund.js"></script>
+    <script src="hundskotare.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

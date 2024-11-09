@@ -1,0 +1,100 @@
+/* Enkel css-reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: #e4cfbe;
+}
+
+/*------------ BODY ------------*/
+body {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "titel titel"
+    "hunds hunda"
+    "dagis hunda"
+    "boxen hunda";
+}
+
+#hunddagisNamn {
+  grid-area: titel;
+}
+
+#hundskotareSektion {
+  grid-area: hunds;
+}
+
+#hundarSektion {
+  grid-area: hunda;
+}
+
+#bytDagisnamnSektion {
+  grid-area: dagis;
+}
+
+#bytBoxSektion {
+  grid-area: boxen;
+}
+
+h1 {
+  text-align: center;
+  margin: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+  color: #2e1c14;
+}
+
+#hundskotareSektion,
+#hundarSektion,
+#bytDagisnamnSektion,
+#kollaBoxSektion {
+  background-color: #f7f0e4;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+#hundskotareSektion,
+#hundarSektion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#hundSkotareDiv,
+#hundarInneDiv {
+  display: flex;
+  gap: 0.5em;
+}
+
+button {
+  display: block;
+  padding: 0.2em;
+  margin: 0.2em 0;
+}
+
+.laggInISystemet *,
+#bytDagisnamnSektion *,
+#kollaBoxSektion * {
+  padding: 0.3em;
+}
+
+#hundskotareSektion section div,
+#hundarPaDagiset div {
+  margin: 0.5em;
+}
+
+.laggInISystemet {
+  border: 2px #865933 dotted;
+  border-radius: 1em;
+  padding: 0.5em;
+  bottom: 0;
+}
